@@ -30,3 +30,28 @@ function atualizaContador() {
 }
 
 window.onload = atualizaContador();
+
+
+var map;
+function loadMapScenario() {
+    var x = '-23.184425';
+    var y = '-47.111923';
+
+
+    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+        zoom: 16,
+        // center: new Microsoft.Maps.Location(-20.577186, -48.570062)
+        center: new Microsoft.Maps.Location(x, y)
+    });
+    // var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), { color: 'red' });
+    var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), {
+        // icon: 'https://www.sodresantoro.com.br/imagens/mapa-icon.png',
+        icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
+        // anchor: new Microsoft.Maps.Point(12, 39),
+        // text: 'A',
+        // textOffset: new Microsoft.Maps.Point(0, 5)
+    });
+    map.entities.push(pushpin);
+}
+
+window.onload = loadMapScenario;
