@@ -8,7 +8,7 @@
 
 function atualizaContador() {
     var hoje = new Date();
-    var futuro = new Date(2018, (12 - 1), 1, 59, 59, 59);
+    var futuro = new Date(2018, 11, 1, 0, 0, 0);
     var ss = parseInt((futuro - hoje) / 1000);
     var mm = parseInt(ss / 60);
     var hh = parseInt(mm / 60);
